@@ -40,11 +40,10 @@ def total_even_pairs(src)
   totalEven = 0
   row_index = 0 
   while row_index < src.length do 
-    innerA = src[row_index][0] + src[row_index][1]
-    holderN = totalEven
-    if innerA.even?
-      totalEven = innerA + holderN
-      puts totalEven
+    holderN = 0
+    if src[row_index][0].even? && src[row_index][1].even?
+      holderN = src[row_index][0] + src[row_index][1]
+      totalEven = holderN + totalEven
     end 
     row_index += 1
   end 
