@@ -41,8 +41,8 @@ def total_even_pairs(src)
   row_index = 0 
   while row_index < src.length do 
     innerA = src[row_index][0] + src[row_index][1]
-    totalEven
     if innerA.even?
+      totalEven
       totalEven = innerA + totalEven
     end 
     row_index += 1
